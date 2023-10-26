@@ -1,0 +1,83 @@
+.contact__container {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+  }
+  .contact__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-left: 0.7rem;
+  }
+  .contact__option {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    width: 290px;
+  }
+  .contact__option:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+  }
+  .contact__option-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .contact__option a {
+    margin-top: 0.7rem;
+    margin-left: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+  }
+  /* ================ FORM ================= */
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: rgb(230, 212, 180);
+    border: 2px solid black;
+    resize: none;
+    color: black;
+  }
+  
+  /* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
+  
+  @media screen and (max-width: 1024px) {
+    .contact__container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  /* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
+  @media screen and (max-width: 600px) {
+    .contact__container {
+      width: var(--container-width-sm);
+    }
+  }
+  
+.contact_me{
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.contact__option a:hover{
+    color:aqua
+}
+
+#contact{
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    height: auto;
+}
