@@ -6,7 +6,7 @@ export function Resume() {
     <div>
       <button class="button-64" role="button">
         <span class="text">
-          <a href="https://drive.google.com/file/d/1z35FgfFq0aEd6uYSqVF6NxchEnLvcXod/view?usp=drivesdk">
+          <a href="https://drive.google.com/file/d/10W3eIf2Bs_h6K2W1B4trkcpYLT8QNJnl/view?usp=drivesdk">
             Resume
           </a>
         </span>
