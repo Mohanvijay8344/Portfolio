@@ -73,6 +73,7 @@ function Navbar() {
                 <a
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   href="https://drive.google.com/file/d/10W3eIf2Bs_h6K2W1B4trkcpYLT8QNJnl/view?usp=drivesdk"
+                  target="_blank"
                 >
                   Resume
                 </a>

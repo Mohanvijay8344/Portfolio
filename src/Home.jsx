@@ -10,7 +10,6 @@ export function Home() {
     <div className="homeMainContainer">
       <div className="home_container">
         <Homes />
-        <Profile />
       </div>
       <div className="resume">
         <Resume />
