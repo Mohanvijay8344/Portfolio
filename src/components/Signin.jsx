@@ -1,8 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import { API } from "./global";
-import { useNavigate } from "react-router-dom";
 import "./Signin.css";
+import { useNavigate } from "react-router-dom";
 
 export function Signin() {
   const navigate = useNavigate();
@@ -28,16 +28,22 @@ export function Signin() {
         const result = await data.json();
         console.log(result);
         localStorage.setItem("token", result.token);
-        navigate("/home");
         alert("Login Successfull ✅✅")
-
+        navigate("/projects")
       }
     },
   });
 
+  function signup_page() {
+    navigate('/projects/signup')
+  }
+
+  function rest_page(){
+    navigate('/projects/forgot-password')
+  }
   return (
-    <div className="container">
-      <h1>Login</h1>
+    <div className="login_container">
+      <h1>Need Login to open Projects Preview & Github Link</h1>
       <form className="form" onSubmit={formik.handleSubmit}>
         <input
           placeholder="username"
@@ -53,9 +59,9 @@ export function Signin() {
         />
         <button type="submit">Sign In</button>
         <label>
-          Not a member? <a href="/signup">Sign Up</a>
+          Not a member? <a onClick={()=> signup_page()}>Sign Up</a>
         </label>
-        <a href="/forgot-password">Forgot Password</a>
+        <a onClick={() => rest_page()}>Forgot Password</a>
       </form>
     </div>
   );

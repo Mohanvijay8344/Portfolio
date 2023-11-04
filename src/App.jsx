@@ -1,31 +1,37 @@
-import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import React from "react";
-import { useEffect } from "react";
 import logo from "./images/the.jpg";
 import "./App.css";
 import { motion } from "framer-motion";
 import { Chrono } from "react-chrono";
 import "react-vertical-timeline-component/style.min.css";
-import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
 import Contact from "./Contact";
 import { Projects } from "./Projects";
 import { About } from "./About";
 import { Home } from "./Home";
 import { AllSkills } from "./Skills";
+import { Signin } from "./components/Signin";
+import { Signup } from "./components/Signup";
+import { Reset } from "./components/Reset"
+import { Forgot } from "./components/Forgot";
 
 export default function App() {
   return (
-    <Router>
+    <div className="mains">
       <Navbar />
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/skills" component={AllSkills} />
-        <Route path="/" component={Home} />
-      </Switch>
-    </Router>
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/projects/signin" element={<Signin />} />
+        <Route path="/projects/signup" element={<Signup />} />
+        <Route path="/projects/reset-password" element={<Reset />} />
+        <Route path="/projects/forgot-password" element={<Forgot />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/skills" element={<AllSkills />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+    
   );
 }
 
@@ -48,31 +54,31 @@ function Navbar() {
                 </Link>
                 <Link
                   to="/projects"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-300 hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Projects
                 </Link>
                 <Link
                   to="/about"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-300 hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   About Me
                 </Link>
                 <Link
                   to="/skills"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-300 hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Skills
                 </Link>
                 <Link
                   to="/contact"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-300 hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Contact
                 </Link>
                 <a
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="https://drive.google.com/file/d/10W3eIf2Bs_h6K2W1B4trkcpYLT8QNJnl/view?usp=drivesdk"
+                  className="text-gray-300 hover-bg-gray-700 hover-text-white px-3 py-2 rounded-md text-sm font-medium"
+                  href="https://drive.google.com/file/d/1_et8uiL7_mTtSCuv3QgHuXJgGufXZgTg/view"
                   target="_blank"
                 >
                   Resume

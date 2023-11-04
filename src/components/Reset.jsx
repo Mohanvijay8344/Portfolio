@@ -22,13 +22,13 @@ export function Reset() {
         body: JSON.stringify(values),
       });
       if (data.status === 200) {
-        navigate("/");
+        navigate("/projects");
       }
     },
   });
 
   return (
-    <div className="container">
+    <div className="login_container">
       <h1>Reset Password</h1>
       <form className="form" onSubmit={formik.handleSubmit}>
         <input

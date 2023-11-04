@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 30% 58%;
     gap: 12%;
+    min-height: 100vh;
   }
   .contact__options {
     display: flex;

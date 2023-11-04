@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import { API } from "./global";
 import { useNavigate } from "react-router-dom";
-import "./Signup.css"; // Import the CSS file
+import "./Signup.css";
 
 export function Signup() {
   const navigate = useNavigate();
@@ -22,18 +22,23 @@ export function Signup() {
       });
       if (data.status === 401) {
         console.log("error");
+        alert("Invalid Cretentials ❌❌")
       } else {
         console.log("success");
         const result = await data.json();
         console.log(result);
         localStorage.setItem("token", result.token);
-        navigate("/");
+        navigate("/projects/signin");
       }
     },
   });
 
+  function login_page() {
+    navigate("/projects/signin")
+  }
+
   return (
-    <div className="container">
+    <div className="login_container">
       <h1>Signup</h1>
       <form className="form" onSubmit={formik.handleSubmit}>
         <input
@@ -51,7 +56,7 @@ export function Signup() {
         />
         <button type="submit">Sign Up</button>
         <label>
-          Already have an Account? <a href="/">Sign In</a>
+          Already have an Account? <a onClick={() => login_page()}>Sign In</a>
         </label>
       </form>
     </div>

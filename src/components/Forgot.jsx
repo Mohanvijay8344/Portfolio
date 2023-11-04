@@ -25,12 +25,16 @@ export function Forgot() {
         console.log("success");
         const result = await data.json();
         console.log(result);
+        navigate("/projects/reset-password")
       }
     },
   });
 
+  function singin_page(){
+    navigate("/projects/signin")
+  }
   return (
-    <div className="container">
+    <div className="login_container">
       <h1>Forgot Password</h1>
       <form className="form" onSubmit={formik.handleSubmit}>
         <input
@@ -41,7 +45,7 @@ export function Forgot() {
         />
         <button type="submit">Submit</button>
         <label>
-          I Know Password...!!! <a href="/">Sign In</a>
+          I Know Password...!!! <a onClick={() => singin_page()}>Sign In</a>
         </label>
       </form>
     </div>

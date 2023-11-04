@@ -20,6 +20,7 @@
     color: var(--color-white);
     line-height: 1.7;
     background-image: var(--bg-texture);
+    min-height: 100vh;
   }
 
 .portfolio__container {
@@ -94,4 +95,5 @@
     font-size: larger;
     font-weight: bolder;
     padding-bottom: 20px;
+    color: --color-white;
   }

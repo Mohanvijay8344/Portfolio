@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Projects.css";
 import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.png";
 import img3 from "./images/img3.png";
 import img4 from "./images/img4.png";
 import img5 from "./images/img5.png";
+import { useNavigate } from "react-router-dom";
 
 export function Projects() {
+  const navigate = useNavigate();
   const data = [
     {
       title: "Movies Cafe",
@@ -39,22 +41,49 @@ export function Projects() {
       demo: "https://sage-cendol-9297b1.netlify.app/",
     },
   ];
+
+  const isTokenAvailable = () => {
+    const token = localStorage.getItem("token");
+    return token !== null; 
+  };
+
+
   return (
     <section id="portfolio">
       <h1 className="head">My Recent Work</h1>
       <div className="container portfolio__container">
-        {data.map(({  image, title, github, demo }) => {
+        {data.map(({ image, title, github, demo }) => {
           return (
-            <article  className="portfolio__item">
+            <article className="portfolio__item" key={title}>
               <div className="portfolio__item-image">
-                <img src={image} alt="" />
+                <img src={image} alt={title} />
               </div>
               <h3>{title}</h3>
               <div className="portfolio__item-cta">
-                <a href={github} className="btn" target="_blank">
+                <a
+                  href={github}
+                  onClick={(e) => {
+                    if (!isTokenAvailable()) {
+                      e.preventDefault(); 
+                      navigate("./signin")
+                    } 
+                  }}
+                  className={`btn ${!isTokenAvailable() ? 'disabled' : ''}`}
+                  target="_blank"
+                >
                   Github
                 </a>
-                <a href={demo} className="btn btn-primary" target="_blank">
+                <a
+                  href={demo}
+                  onClick={(e) => {
+                    if (!isTokenAvailable()) {
+                      e.preventDefault();
+                      navigate("./signin")
+                    }
+                  }}
+                  className={`btn btn-primary ${!isTokenAvailable() ? 'disabled' : ''}`}
+                  target="_blank"
+                >
                   Live Demo
                 </a>
               </div>
@@ -66,11 +95,3 @@ export function Projects() {
   );
 }
 
-function Pros({ name, image }) {
-  return (
-    <div>
-      <h1>{name}</h1>
-      <img src={image} alt={name} />
-    </div>
-  );
-}
