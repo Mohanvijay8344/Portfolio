@@ -16,10 +16,6 @@
 }
 
 .resume{
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-content: center;
     background: #000435;  
 }
 .profile{

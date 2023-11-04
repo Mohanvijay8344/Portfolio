@@ -46,13 +46,13 @@ export function Signin() {
       <h1>Need Login to open Projects Preview & Github Link</h1>
       <form className="form" onSubmit={formik.handleSubmit}>
         <input
-          placeholder="username"
+          placeholder="Email"
           name="username"
           value={formik.values.username}
           onChange={formik.handleChange}
         />
         <input
-          placeholder="password"
+          placeholder="Password"
           name="password"
           value={formik.values.password}
           onChange={formik.handleChange}
