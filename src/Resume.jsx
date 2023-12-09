@@ -11,7 +11,7 @@ export function Resume() {
     <div className="buttons">
       <button class="button-64" role="button">
         <span class="text">
-          <a href="https://drive.google.com/file/d/1dpLeAXYOOe6KOd78kt4NDXJXoEz0Y4Hk/view" target="_blank">
+          <a href="https://drive.google.com/file/d/1084zp-h3BMJg9uIwRX2kPdakEm1u8aYX/view" target="_blank">
             Resume
           </a>
         </span>

@@ -6,6 +6,8 @@ import img3 from "./images/img3.png";
 import img4 from "./images/img4.png";
 import img5 from "./images/img5.png";
 import { useNavigate } from "react-router-dom";
+import img6 from "./images/img6.png";
+
 
 export function Projects() {
   const navigate = useNavigate();
@@ -35,10 +37,16 @@ export function Projects() {
       demo: "https://bucolic-cannoli-0e4bd7.netlify.app/",
     },
     {
-      title: "E-Commerce",
+      title: "Add to Cart",
       image: img5,
       github: "https://github.com/Mohanvijay8344/Add-to-Price-Card",
       demo: "https://sage-cendol-9297b1.netlify.app/",
+    },
+    {
+      title: "E-Commerce",
+      image: img6,
+      github: "https://github.com/Mohanvijay8344/E-Commerce/tree/master/vite-project",
+      demo: "https://6573da5b60517d157ac11f45--dynamic-wisp-98f36a.netlify.app/",
     },
   ];
 
