@@ -34,7 +34,7 @@ export function Projects() {
       title: "Gold Rate Calculator",
       image: img4,
       github: "https://github.com/Mohanvijay8344/Gold-Rate-Calculator_Frontend/tree/master/frontend",
-      demo: "https://bucolic-cannoli-0e4bd7.netlify.app/",
+      demo: "https://gold-rate-calculator-capstone.netlify.app",
     },
     {
       title: "Add to Cart",
