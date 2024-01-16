@@ -1,53 +1,52 @@
 import React, { useState } from "react";
 import "./Projects.css";
-import img1 from "./images/img1.jpg";
-import img2 from "./images/img2.png";
 import img3 from "./images/img3.png";
 import img4 from "./images/img4.png";
-import img5 from "./images/img5.png";
 import { useNavigate } from "react-router-dom";
 import img6 from "./images/img6.png";
+import book from './images/books.png';
+import notes from './images/notes.png';
 
 
 export function Projects() {
   const navigate = useNavigate();
   const data = [
     {
-      title: "Movies Cafe",
-      image: img1,
-      github: "https://github.com/Mohanvijay8344/Notes-master/tree/master/react_demo",
-      demo: "https://benevolent-sawine-a9dd39.netlify.app/",
-    },
-    {
-      title: "Youtube Clone",
-      image: img2,
-      github: "https://github.com/Mohanvijay8344/Youtube_Clone",
-      demo: "https://mohan-youtube-clone.netlify.app/",
+      title: "E-Commerce",
+      image: img6,
+      client: "https://github.com/Mohanvijay8344/E-Commerce/tree/master/vite-project",
+      server: "https://github.com/Mohanvijay8344/E-Commerce-Payment",
+      demo: "https://65a60f687aa5987944da2f57--wondrous-taffy-5e8f2c.netlify.app/",
     },
     {
       title: "Money Manager",
       image: img3,
-      github: "https://github.com/Mohanvijay8344/Money-Management/tree/master/FrontEnd/Money-Manager",
+      client: "https://github.com/Mohanvijay8344/Money_manager-Frontends",
+      server: "https://github.com/Mohanvijay8344/Money_Manager_Backends",
       demo: "https://zesty-starlight-ad1b59.netlify.app/",
     },
     {
       title: "Gold Rate Calculator",
       image: img4,
-      github: "https://github.com/Mohanvijay8344/Gold-Rate-Calculator_Frontend/tree/master/frontend",
+      client: "https://github.com/Mohanvijay8344/Gold-Rate-Calculator_Frontend/tree/master/frontend",
+      server: "https://github.com/Mohanvijay8344/Gold-Rate-Calculator_Frontend/tree/master/frontend",
       demo: "https://gold-rate-calculator-capstone.netlify.app",
     },
     {
-      title: "Add to Cart",
-      image: img5,
-      github: "https://github.com/Mohanvijay8344/Add-to-Price-Card",
-      demo: "https://sage-cendol-9297b1.netlify.app/",
+      title: "Notes Taking App",
+      image: notes,
+      client: "https://github.com/Mohanvijay8344/Notes-app-frontend-master",
+      server: "https://github.com/Mohanvijay8344/Notes-app-backend-master",
+      demo: "https://y-nine-eosin.vercel.app/",
     },
     {
-      title: "E-Commerce",
-      image: img6,
-      github: "https://github.com/Mohanvijay8344/E-Commerce/tree/master/vite-project",
-      demo: "https://6573da5b60517d157ac11f45--dynamic-wisp-98f36a.netlify.app/",
+      title: "Book Store",
+      image: book,
+      client: "https://github.com/Mohanvijay8344/Book_Store_Client",
+      server: "https://github.com/Mohanvijay8344/Book_Store_Backend",
+      demo: "https://stupendous-cupcake-6efdaf.netlify.app/",
     },
+    
   ];
 
   const isTokenAvailable = () => {
@@ -59,8 +58,13 @@ export function Projects() {
   return (
     <section id="portfolio">
       <h1 className="head">My Recent Work</h1>
+      <div className="credentials">
+        <h1>User Credentials</h1>
+        <p><span className="users">User Name: </span> Mohanvijay8344@gmail.com</p>
+        <p><span className="users">Password: </span> 123456789</p>
+      </div>
       <div className="container portfolio__container">
-        {data.map(({ image, title, github, demo }) => {
+        {data.map(({ image, title, client, server, demo }) => {
           return (
             <article className="portfolio__item" key={title}>
               <div className="portfolio__item-image">
@@ -69,7 +73,7 @@ export function Projects() {
               <h3>{title}</h3>
               <div className="portfolio__item-cta">
                 <a
-                  href={github}
+                  href={client}
                   onClick={(e) => {
                     if (!isTokenAvailable()) {
                       e.preventDefault(); 
@@ -79,7 +83,20 @@ export function Projects() {
                   className={`btn ${!isTokenAvailable() ? 'disabled' : ''}`}
                   target="_blank"
                 >
-                  Github
+                  Frontend
+                </a>
+                <a
+                  href={server}
+                  onClick={(e) => {
+                    if (!isTokenAvailable()) {
+                      e.preventDefault(); 
+                      navigate("./signin")
+                    } 
+                  }}
+                  className={`btn ${!isTokenAvailable() ? 'disabled' : ''}`}
+                  target="_blank"
+                >
+                  Backend
                 </a>
                 <a
                   href={demo}

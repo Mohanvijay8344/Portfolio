@@ -97,3 +97,12 @@
     padding-bottom: 20px;
     color: --color-white;
   }
+
+  .credentials{
+    align-items: center;
+    text-align: center;
+  }
+
+  .users{
+    color: #eccc13;
+  }
