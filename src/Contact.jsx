@@ -45,12 +45,6 @@ class Contact extends Component {
               <a href="mailto:Mohanvijay8344@gmail.com">Send a message</a>
             </div>
             <div className="contact__option">
-              <BiLogoInstagram className="contact__option-icon" />
-              <h4>Instagram</h4>
-              <h5>mr.bean_off</h5>
-              <a href="https://www.instagram.com/mr.bean_off/?target_user_id=59888779073&ndid=6079abf29aab2G24bc3acca07f41G6079b08bfad86G9e4&utm_medium=email&utm_campaign=ig_suspicious_login&__bp=1">Send a message</a>
-            </div>
-            <div className="contact__option">
               <RiWhatsappLine className="contact__option-icon" />
               <h4>Whatsapp</h4>
               <h5>+91 8344116557</h5>
