@@ -1,15 +1,14 @@
 .contact__container {
-    width: 58%;
-    display: grid;
-    grid-template-columns: 30% 58%;
-    gap: 12%;
-    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+
   }
   .contact__options {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1.2rem;
     margin-left: 0.7rem;
+    height: 180px;
   }
   .contact__option {
     background: var(--color-bg-variant);
@@ -36,11 +35,7 @@
   }
   /* ================ FORM ================= */
   
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
+
   input,
   textarea {
     width: 100%;
@@ -80,5 +75,24 @@
 
 #contact{
     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-    height: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 30px;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
 }

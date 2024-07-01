@@ -9,15 +9,15 @@ export function Resume() {
   }
   return (
     <div className="buttons">
-      <button class="button-64" role="button">
-        <span class="text">
+      <button className="button-64" role="button">
+        <span className="text">
           <a href="https://drive.google.com/file/d/1084zp-h3BMJg9uIwRX2kPdakEm1u8aYX/view" target="_blank">
             Resume
           </a>
         </span>
       </button>
-      <button class="button-64" role="button">
-        <span class="text">
+      <button className="button-64" role="button">
+        <span className="text">
           <a onClick={() => contact_page()}>
           Contact
           </a>

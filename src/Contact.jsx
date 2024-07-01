@@ -48,9 +48,7 @@ class Contact extends Component {
               <RiWhatsappLine className="contact__option-icon" />
               <h4>Whatsapp</h4>
               <h5>+91 8344116557</h5>
-              <a href="https://wa.me/+918344116557">
-                Send a message
-              </a>
+              <a href="https://wa.me/+918344116557">Send a message</a>
             </div>
             <div className="contact__option">
               <BiLogoLinkedinSquare className="contact__option-icon" />
@@ -61,30 +59,8 @@ class Contact extends Component {
               </a>
             </div>
           </div>
-          <form ref={this.form} onSubmit={this.sendEmail} action="">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Full Name"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              rows="7"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit" className="btn btn-primary">
-              Send Message
-            </button>
-          </form>
         </div>
+       
       </section>
     );
   }
