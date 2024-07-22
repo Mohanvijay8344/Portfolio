@@ -1,3 +1,5 @@
+/* @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap"); */
+
 .home_container{
     display: flex;
     align-items: center;
@@ -6,7 +8,6 @@
     background: #000435;
     height: 80vh;
     padding-bottom: 30px;
-    
 }
 
 body {
@@ -21,6 +22,7 @@ body {
     justify-content: center;
     background: #000435;  /* fallback for old browsers */
     height: 100vh;
+    transition: width 2s;
 }
 
 .resume{
@@ -88,9 +90,9 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     border-radius: 50px;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
-.glow{
+
+.glow {
     margin-bottom: 20px;
   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
@@ -148,3 +150,4 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     color: #fff6a9;
   }
 }
+

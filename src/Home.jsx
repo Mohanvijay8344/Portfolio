@@ -1,5 +1,5 @@
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import profile from "./images/profile.png";
 import "./App.css";
 import { Resume } from "./Resume";
@@ -7,33 +7,66 @@ import { Projects } from "./Projects";
 import { About } from "./About";
 import { AllSkills } from "./Skills";
 import Contact from "./Contact";
+import "./Transitions.css"; 
+import { TypeAnimation } from "react-type-animation";
 
 // Home.jsx
 export function Home() {
   return (
     <div className="homeMainContainer">
-      <div className="home_container">
-        <Homes />
-      </div>
+      <TransitionGroup>
+        <CSSTransition
+          key="home"
+          timeout={500}
+          className="fade-enter-active"
+        >
+          <div className="home_container">
+            <Homes />
+          </div>
+        </CSSTransition>
+      </TransitionGroup>
       <div className="flex flex-col">
-      <Projects />
-      <AllSkills />
-      <About />
-      <Contact />
+        <TransitionGroup>
+          <CSSTransition
+            key="projects"
+            timeout={500}
+            className="fade"
+          >
+            <Projects />
+          </CSSTransition>
+          <CSSTransition
+            key="skills"
+            timeout={500}
+            className="fade"
+          >
+            <AllSkills />
+          </CSSTransition>
+          <CSSTransition
+            key="about"
+            timeout={500}
+            className="fade"
+          >
+            <About />
+          </CSSTransition>
+          <CSSTransition
+            key="contact"
+            timeout={500}
+            className="fade"
+          >
+            <Contact />
+          </CSSTransition>
+        </TransitionGroup>
       </div>
-      
     </div>
   );
 }
-
-
 
 function Homes() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center pt-32 pb-12">
         <h1 className="font-bold Mohanraj">Hello...I'm</h1>
-        <h1 className="text-5xl font-bold text-gray-900 Mohanraj ">
+        <h1 className="text-5xl font-bold text-gray-900 Mohanraj">
           Mohanraj <span className="last_name">Senthilnathan</span>
         </h1>
         <p className="mt-6 text-xl text-gray-500 glow">Mern Stack Developer</p>
@@ -66,15 +99,8 @@ function Homes() {
         />
         <Resume />
       </div>
-      
     </div>
   );
 }
 
-function Profile() {
-  return (
-    <div>
-      <img className="profile" src={profile} alt="profile" />
-    </div>
-  );
-}
+export default Home;

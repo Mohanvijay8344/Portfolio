@@ -77,7 +77,7 @@ function Skills({ name, image }) {
       <div className="card-details">
         <img src={image} alt={name} />
       </div>
-      <a className="card-button" href="#link">
+      <a className="card-button">
         {name}
       </a>
     </div>

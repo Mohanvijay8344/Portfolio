@@ -10,7 +10,7 @@ export function About() {
   return (
     <div className="abouts">
       <div className="about_me">
-        <h1 className="text-3xl font-bold mb-4 pt-10">About Me</h1>
+        <h1 className="text-3xl font-bold mb-4 pt-10 text-black">About Me</h1>
         <p className="mb-6">
           Hello, I am a full-stack developer with a focus on building web
           applications. I am highly curious about the nature of tech, and a

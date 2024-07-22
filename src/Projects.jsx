@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import img6 from "./images/img6.png";
 import book from "./images/books.png";
 import notes from "./images/notes.png";
+import shopify_image from './images/shopify_image.png'
 
 export function Projects() {
   const navigate = useNavigate();
@@ -24,6 +25,13 @@ export function Projects() {
       client: "https://github.com/Mohanvijay8344/Money_manager-Frontends",
       server: "https://github.com/Mohanvijay8344/Money_Manager_Backends",
       demo: "https://zesty-starlight-ad1b59.netlify.app/",
+    },
+    {
+      title: "Shopify Mart",
+      image: shopify_image,
+      client: "https://github.com/Mohanvijay8344/shopifymart_Frontend",
+      server: "https://github.com/Mohanvijay8344/shopifymart_Backend",
+      demo: "https://main--super-mermaid-5f22e3.netlify.app/",
     },
     {
       title: "Gold Rate Calculator",
@@ -95,7 +103,7 @@ export function Projects() {
                     onClick={(e) => {
                       if (!isTokenAvailable()) {
                         e.preventDefault();
-                        navigate("./signin");
+                        navigate("/projects/signin");
                       }
                     }}
                     className={`btn ${!isTokenAvailable() ? "disabled" : ""}`}
@@ -108,7 +116,7 @@ export function Projects() {
                     onClick={(e) => {
                       if (!isTokenAvailable()) {
                         e.preventDefault();
-                        navigate("./signin");
+                        navigate("/projects/signin");
                       }
                     }}
                     className={`btn btn-primary ${
