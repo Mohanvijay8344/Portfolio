@@ -90,7 +90,7 @@ export function Projects() {
                     onClick={(e) => {
                       if (!isTokenAvailable()) {
                         e.preventDefault();
-                        navigate("./signin");
+                        navigate("/projects/signin");
                       }
                     }}
                     className={`btn ${!isTokenAvailable() ? "disabled" : ""}`}
