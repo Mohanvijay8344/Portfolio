@@ -64,7 +64,7 @@ export function Home() {
 function Homes() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center pt-32 pb-12">
+      <div className="text-center pt-32 pb-20">
         <h1 className="font-bold Mohanraj">Hello...I'm</h1>
         <h1 className="text-5xl font-bold text-gray-900 Mohanraj">
           Mohanraj <span className="last_name">Senthilnathan</span>

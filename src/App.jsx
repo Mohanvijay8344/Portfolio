@@ -84,7 +84,7 @@ export function Navbar()  {
                 </Link>
                 <a
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="https://drive.google.com/file/d/1084zp-h3BMJg9uIwRX2kPdakEm1u8aYX/view"
+                  href="https://drive.google.com/file/d/1Lp04Fd3DJGSTT8aFcOg7Ci5xVrZgti-k/view"
                   target="_blank"
                 >
                   Resume
