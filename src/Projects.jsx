@@ -17,7 +17,7 @@ export function Projects() {
       client:
         "https://github.com/Mohanvijay8344/E-Commerce/tree/master/vite-project",
       server: "https://github.com/Mohanvijay8344/E-Commerce-Payment",
-      demo: "https://65a60f687aa5987944da2f57--wondrous-taffy-5e8f2c.netlify.app/",
+      demo: "https://fantastic-torrone-cbe8aa.netlify.app/",
     },
     {
       title: "Money Manager",
